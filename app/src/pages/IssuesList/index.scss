@@ -1,0 +1,50 @@
+@import 'styles/fonts';
+@import 'styles/variables';
+
+.tabContainer {
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+.tabContainerSpace {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between;
+    
+    @media screen and (max-width: $screen-sm) {
+        flex-direction: column;
+    }
+}
+
+.tabContainerRow {
+    display: flex; 
+    flex-direction: row;
+}
+
+.tabActive {
+    margin-right: 15px; 
+    cursor: pointer;
+    color: $light-red;
+}
+
+.tabInactive {
+    margin-right: 15px; 
+    cursor: pointer; 
+    color: black;
+}
+
+.close {
+    margin-right: -40px;
+    font-size: $font-size-xlarge;
+    cursor: pointer;
+
+    @media screen and (max-width: $screen-sm) {
+        font-weight: 700;
+        font-size: $font-size-medium;
+        margin-top: 20px;
+    }
+}
+
+.loading {
+    margin-bottom: 10px;
+}

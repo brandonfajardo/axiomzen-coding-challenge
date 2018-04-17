@@ -1,0 +1,41 @@
+@import 'styles/variables';
+@import 'styles/fonts';
+
+.header {
+    background-color: $light-red;
+    height: 100px; 
+    display: flex; 
+    justify-content: center; 
+    flex-direction: column; 
+    box-shadow: 1px 5px 17px -4px rgba(0,0,0,0.3);
+}
+
+.headerInnerContainer {
+    display: flex;
+    justify-content: space-between;
+    color: $white;
+
+    @media screen and (max-width: $screen-sm) {
+        flex-direction: column;
+    }
+}
+
+.headerTitle {
+    color: $white; 
+    margin-left: 40px;
+    font-size: $font-size-large;
+    font-family: $font-family-bold;
+}
+
+.headerLink {
+    margin-right: 40px;
+    text-decoration: none;
+    color: $dark-red;
+    font-size: $font-size-medium;
+
+    @media screen and (max-width: $screen-md) {
+        margin-left: 40px;
+        font-size: $font-size-small;
+        margin-top: 10px;
+    }
+}

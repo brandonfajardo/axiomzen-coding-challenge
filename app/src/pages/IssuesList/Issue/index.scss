@@ -1,0 +1,40 @@
+@import 'styles/variables';
+@import 'styles/fonts';
+
+.issueContainer {
+    margin-bottom: 20px;
+    height: 200px;
+    position: relative;
+    box-shadow: 1px 5px 17px -4px rgba(0,0,0,0.3);
+    background-color: $white;
+}
+
+.issueTitle {
+    background-color: $light-blue;
+    color: $white;
+    font-size: $font-size-medium;
+    font-family: $font-family-regular;
+    padding: 15px;
+}
+
+.issueBottomContainer {
+    padding: 10px;
+}
+
+.issueBottomInnerContainer {
+    height: 100px;
+    overflow: hidden;
+}
+
+.issueTextBody {
+    font-size: $font-size-small;
+    color: $light-teal;
+}
+
+.labelsContainer {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    margin-bottom: 10px;
+    bottom: 0;
+}

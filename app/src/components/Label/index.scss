@@ -1,0 +1,12 @@
+@import 'styles/variables';
+@import 'styles/fonts';
+
+.label {
+    font-size: $font-size-smallest;
+    text-align: center;
+    margin-right: 10px;
+    padding: 2px 5px;
+    border-radius: 3px;
+    background-color: $light-red;
+    color: $white;
+}

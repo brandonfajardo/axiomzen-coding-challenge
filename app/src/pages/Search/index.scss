@@ -1,0 +1,41 @@
+@import 'styles/variables';
+@import 'styles/fonts';
+
+.searchContainer {
+    height: 100vh;
+    background: $light-red;
+    display: flex;
+    justify-content: center;
+}
+
+.searchTitle {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: $font-size-xlarge;
+    font-family: $font-family-bold;
+    color: $white;
+}
+
+.alignCenter {
+    align-self: center;
+}
+
+.searchInput {
+    box-shadow: 1px 5px 17px -4px rgba(0,0,0,0.3);
+    width: 350px;
+    padding: 10px;
+    border: none;
+}
+
+.searchInput:focus {
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+.searchMessage {
+    color: $dark-red;
+    margin-top: 10px;
+    position: absolute;
+    font-size: $font-size-smallest;
+}
