@@ -29,6 +29,7 @@
 .issueTextBody {
     font-size: $font-size-small;
     color: $light-teal;
+    font-family: $font-family-regular;
 }
 
 .labelsContainer {
@@ -37,4 +38,8 @@
     position: absolute;
     margin-bottom: 10px;
     bottom: 0;
+}
+
+.noDescription {
+    color: $gray;
 }

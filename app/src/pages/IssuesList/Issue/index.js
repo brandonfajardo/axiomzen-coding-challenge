@@ -8,7 +8,8 @@ const Issue = ({ title, body, labels, state }) => (
         <p className="issueTitle">{title}</p>
         <div className="issueBottomContainer">
             <div className="issueBottomInnerContainer">
-            <p className="issueTextBody">{_.truncate(body, { length: 90 })}</p>
+            {body ? <p className="issueTextBody">{_.truncate(body, { length: 90 })}</p>
+            : <p className="issueTextBody noDescription">No description provided.</p>}
             </div>
             <div className="labelsContainer">
                 {labels.map(label => <Label {...label} />)}
