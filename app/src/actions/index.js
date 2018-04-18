@@ -7,6 +7,7 @@ import {
 } from './types'
 import history from '../history'
 import axios from 'axios'
+import { getLastPageNumber } from '../util'
 
 export const findRepo = (user, repoName, currentPageNumber) => dispatch => {
     
@@ -14,15 +15,7 @@ export const findRepo = (user, repoName, currentPageNumber) => dispatch => {
     
     axios.get(`https://api.github.com/repos/${user}/${repoName}/issues?page=${currentPageNumber}&state=all`)
         .then(({ data, headers }) => {
-            const arr = headers.link.split('issues?').map(issues => { // could not find a query parameter for last page so I created this fn quickly
-                return issues.substr(0, 10).substr(5,5).match(/[0-9]+/g)
-            }).filter(s => {
-                if (s !== null){
-                    return Number(s[0])
-                }
-            }).map((x) => x[0])
-
-            const lastPageNumber = Math.max(...arr)
+            const lastPageNumber = getLastPageNumber(headers)
 
             return {
                 lastPageNumber,
