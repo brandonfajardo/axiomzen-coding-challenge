@@ -13,14 +13,18 @@ import closeIcon from '../../styles/icons/close.svg'
 import './index.scss'
 
 class IssuesList extends Component {
-    componentDidMount() {
+    componentWillMount() {
         window.addEventListener('scroll', this.onScroll, false);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.onScroll, false);
     }
 
     onScroll = () => {
         const { findRepo, currentPageNumber, lastPageNumber, repoName, user, allIssues, loading, error } = this.props
         if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 50) && allIssues.length && !loading && !error && currentPageNumber <= lastPageNumber) {
-            findRepo(user, repoName, currentPageNumber)
+            findRepo(user, repoName, currentPageNumber + 1)
         }
     }
     
@@ -62,7 +66,7 @@ class IssuesList extends Component {
                                 <p onClick={() => changeActiveTab('closedIssues')} className={tabActive === 'closedIssues' ? 'tabActive' : 'tabInactive'}>Closed Issues</p>
                                 <p onClick={() => changeActiveTab('prIssues')} className={tabActive === 'prIssues' ? 'tabActive' : 'tabInactive'}>Pull Requests</p>
                             </div>
-                            <img src={closeIcon} onClick={() => closeRepo()} className="close" />
+                            <img alt="" src={closeIcon} onClick={() => closeRepo()} className="close" />
                         </div>
                     </div>
                     

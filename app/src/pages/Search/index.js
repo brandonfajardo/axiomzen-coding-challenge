@@ -19,7 +19,7 @@ class Search extends Component {
             <div className="searchContainer">
                 <div className="alignCenter">
                     <h1 className="searchTitle">Github Issue Viewer</h1>
-                    <img className="searchIcon" alt="search icon" src ={searchIcon} />
+                    <img alt="" className="searchIcon" src ={searchIcon} />
                     <input
                         onKeyPress={e => e.preventDefault()}
                         onPaste={this.pasteUrl}

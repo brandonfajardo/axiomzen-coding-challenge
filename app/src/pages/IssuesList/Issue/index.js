@@ -9,7 +9,7 @@ const Issue = ({ title, body, labels, state }) => {
     let icon = state === 'pr' ? pullRequest : state === 'closed' ? issueClosed : ''
     return (
         <div className="issueContainer">
-            <img className="issueIcon" src={icon} />
+            <img alt="" className="issueIcon" src={icon} />
             <p className="issueTitle">{title}</p>
             <div className="issueBottomContainer">
                 <div className="issueBottomInnerContainer">
@@ -17,7 +17,7 @@ const Issue = ({ title, body, labels, state }) => {
                     : <p className="issueTextBody noDescription">No description provided.</p>}
                 </div>
                 <div className="labelsContainer">
-                    {labels.map(label => <Label {...label} />)}
+                    {labels.map((label, i) => <Label key={`label-${i}`} {...label} />)}
                 </div>
             </div>
         </div>
