@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { findRepo } from '../../actions'
+import searchIcon from '../../styles/icons/search.svg'
 import './index.scss'
 
 class Search extends Component {
@@ -18,6 +19,7 @@ class Search extends Component {
             <div className="searchContainer">
                 <div className="alignCenter">
                     <h1 className="searchTitle">Github Issue Viewer</h1>
+                    <img className="searchIcon" alt="search icon" src ={searchIcon} />
                     <input
                         onKeyPress={e => e.preventDefault()}
                         onPaste={this.pasteUrl}
