@@ -55,7 +55,7 @@ export default (state = initialState, action) => {
                 openIssues,
                 closedIssues,
                 prIssues,
-                currentPageNumber: ++action.payload.currentPageNumber,
+                currentPageNumber: action.payload.currentPageNumber,
                 lastPageNumber: action.payload.lastPageNumber,
             }
         case FIND_REPO_FAILURE: 

@@ -25,6 +25,14 @@
     width: 350px;
     padding: 10px;
     border: none;
+    padding-left: 30px;
+}
+
+.searchIcon {
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    padding: 8px;
 }
 
 .searchInput:focus {
